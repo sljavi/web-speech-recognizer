@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sljavi/web-speech-recognizer.svg?branch=master)](https://travis-ci.org/sljavi/web-speech-recognizer)
+
 # Web Speech Recognizer
 
 A convenient client for Web Speech Recognition API.
