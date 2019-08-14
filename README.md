@@ -71,6 +71,7 @@ const speechRecognizer = WebSpeechRecognizer.init({
   }
 })
 
+speechRecognizer.start();
 // Now it is listening
 // You can stop the service executing `speechRecognizer.stop()` and resume it executing `speechRecognizer.start()`
 ```

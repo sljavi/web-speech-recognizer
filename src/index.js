@@ -4,7 +4,7 @@ import * as SpeechRecognitionStepMode from './speech-recognition-step-mode';
 const currentLang = navigator.language || navigator.userLanguage || 'en-US';
 let speechRecognition;
 
-export function init({
+function init({
   continuesRecognition = true,
   lang = currentLang,
   onUserSpeech,
@@ -28,3 +28,7 @@ export function init({
     stop: speechRecognition.stop,
   };
 }
+
+export default {
+  init,
+};

@@ -9,4 +9,11 @@ module.exports = {
     library: 'webSpeechRecognizer',
     libraryTarget: 'umd',
   },
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+    }],
+  },
 };
