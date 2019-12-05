@@ -11,6 +11,9 @@ let stopped = false;
 let onUserSpeech;
 let onUserSpeak;
 
+const ACTIVITY_TIMEOUT = 2 * 60 * 1000; // 2 minutes
+const SPEECH_TIMEOUT = 3 * 1000; // 3 seconds
+
 const defaultState = {
   error: null,
   status: 'stopped',
@@ -105,7 +108,7 @@ function updateHandleResultTimeout(transcriptions, isFinal) {
         transcriptions,
       });
       abortSpeechRecognizer();
-    }, 2000);
+    }, SPEECH_TIMEOUT);
   }
 }
 
@@ -148,7 +151,7 @@ function startSpeakRecognizer() {
     onStopSpeaking: () => {
       speaking = false;
       clearTimeout(waitingForActivityTimeout);
-      waitingForActivityTimeout = setTimeout(handleWaitingForActivityTimeout, 5000);
+      waitingForActivityTimeout = setTimeout(handleWaitingForActivityTimeout, ACTIVITY_TIMEOUT);
     },
     onVolumeChange: (volume) => {
       onUserSpeak(volume);

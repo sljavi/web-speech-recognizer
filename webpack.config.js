@@ -9,6 +9,7 @@ module.exports = {
     library: 'webSpeechRecognizer',
     libraryTarget: 'umd',
   },
+  devtool: 'source-map',
   module: {
     rules: [{
       test: /\.js$/,

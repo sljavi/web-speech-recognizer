@@ -1,6 +1,6 @@
 {
   "name": "web-speech-recognizer",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "A convenient client of Web Speech API",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
